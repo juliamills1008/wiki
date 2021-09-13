@@ -1,0 +1,22 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+	Search Results for {{title}}
+{% endblock %}
+
+{% block body %}
+<h1>Search Results for {{title}}</h1>
+
+{% if related_entries %}
+	<ul>
+		{% for entry in related_entries %}
+		<li>
+			<a href="{{entry}}">{{entry}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% else %}
+	No related entries. 
+{% endif %}
+
+{% endblock %}

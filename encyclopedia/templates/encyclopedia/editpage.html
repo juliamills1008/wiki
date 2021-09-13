@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Edit {{title}}
+{% endblock %}
+{% block body %}
+<h1 align="center">Edit "{{title}}"</h1>
+<form method="post" align="center">
+    {% csrf_token %}
+    {{edit}}
+    <br>
+    <input type="submit" name="save2" value="Save" align="center">
+</form>
+
+{% endblock %}
